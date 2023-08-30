@@ -1,11 +1,13 @@
 #include<iostream>
+#include<iomanip>
+#include<cmath>
 
 using namespace std;
 
 int main(){
 
-    int A;
-    int B;
+    float A;
+    float B;
 
     cout << "A = ";
     cin >> A;
@@ -13,12 +15,12 @@ int main(){
     cout << "B = ";
     cin >> B;
 
+    cout << fixed << setprecision(1) << noshowpoint;
+
     cout << endl << "Soma = " << A+B << endl;
     cout << "Subtração = " << A-B << endl;
     cout << "Multiplicação = " << A*B << endl;
-    cout << "Divisão = " << A/B << endl;
-    cout << "Resto = " << A%B << endl;
-
+    cout << "Divisão = " << floor((A/B) * 10) / 10 << endl;
 
     return 0;
 }
